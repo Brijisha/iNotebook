@@ -6,7 +6,7 @@ function Notes(props) {
   const { notes, setNotes } = context;
   return (
     <div>
-      <div className="contaier">
+      <div className="row my-3">
         <h2>Your Notes</h2>
         {notes.map((note) => {
           return <NoteItem note={note} />;
