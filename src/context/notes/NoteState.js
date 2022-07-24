@@ -4,8 +4,8 @@ import NoteContext from "./noteContext";
 
 const NoteState = (props) => {
   const host = "http://localhost:3001";
-  const authToken =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJiZWQzODM0NjliMTgyNjU1YThiMTIwIn0sImlhdCI6MTY1ODE1OTc0NH0.NJujqG9oVqje0gmZWMWHZz6LnFzL_1uwmc1jRMjE7RQ";
+  const authToken = localStorage.getItem("token");
+
   const notesInitial = [];
   const [notes, setNotes] = useState(notesInitial);
 
@@ -20,23 +20,11 @@ const NoteState = (props) => {
       },
       body: JSON.stringify({ title, description, tag }),
     });
-    const json = await response.json();
-    console.log(json);
-
     // Logic to add in client
-    console.log("Adding new note");
-    const note = {
-      _id: "9",
-      user: "62bed383469b182655a8b120",
-      title: title,
-      description: description,
-      tag: tag,
-      date: "2022-07-04T09:11:58.054Z",
-      __v: 0,
-    };
+    const note = await response.json();
     setNotes(notes.concat(note));
+    console.log("Adding new note");
   };
-
   //--->  2)  Get  all Notes
   const getNotes = async () => {
     // API call
@@ -48,7 +36,7 @@ const NoteState = (props) => {
       },
     });
     const json = await response.json();
-    console.log(json);
+    //console.log(json);
     setNotes(json);
   };
 
@@ -83,7 +71,7 @@ const NoteState = (props) => {
     });
     const json = response.json();
     console.log(json);
-
+    console.log("Updating the note with id: " + id);
     let updatedNotes = JSON.parse(JSON.stringify(notes));
     // Logic to edit in client
     for (let index = 0; index < updatedNotes.length; index++) {
