@@ -41,9 +41,9 @@ const Login = (props) => {
       <h3 className="text-center fw-bold mt-3">
         Login to continue to iNotebook
       </h3>
-      <div className="container-xxxl mt-3 login p-5 m-5">
+      <div className="container-xxxl mt-3 login py-5 px-2 m-1 fs-5">
         <form onSubmit={handleSubmit} className="w-100 h-100">
-          <div className="mb-3">
+          <div className="my-3">
             <label htmlFor="email" className="form-label">
               Email address
             </label>
@@ -60,7 +60,7 @@ const Login = (props) => {
               We'll never share your email with anyone else.
             </div>
           </div>
-          <div className="mb-3">
+          <div className="my-3">
             <label htmlFor="password" className="form-label">
               Password
             </label>

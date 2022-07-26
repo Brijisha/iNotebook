@@ -12,7 +12,7 @@ const Navbar = () => {
     console.log(location.pathname);
   }, [location]);*/
   return (
-    <div className="shadow sticky-top bg-light">
+    <div className="shadow sticky-top bg-light fw-bold fs-5">
       <nav className="flex-wrap flex-md-nowrap navbar navbar-expand-lg navbar-dark bg-dark ">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
