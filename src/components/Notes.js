@@ -4,6 +4,8 @@ import noteContext from "../context/notes/noteContext";
 import AddNote from "./AddNote";
 import NoteItem from "./NoteItem";
 import { useNavigate } from "react-router-dom";
+import iNotebook2 from "../components/iNotebook2.jpg";
+
 function Notes(props) {
   const context = useContext(noteContext);
   // eslint-disable-next-line
@@ -48,7 +50,14 @@ function Notes(props) {
   };
   return (
     <>
-      <AddNote showAlert={props.showAlert} />
+      <div className="row">
+        <div className="col-6 sm-col-12">
+          <AddNote showAlert={props.showAlert} />
+        </div>
+        <div className="col-6 sm-col-12">
+          <img src={iNotebook2} alt="Add your Note here" />
+        </div>
+      </div>
 
       <button
         type="button"

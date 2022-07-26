@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import noteContext from "../context/notes/noteContext";
-
 const AddNote = (props) => {
   const context = useContext(noteContext);
   // eslint-disable-next-line
@@ -19,65 +18,67 @@ const AddNote = (props) => {
   };
   return (
     <div>
-      <div className="container my-3">
-        <h2>Add Your Note Here</h2>
-        <form className="my-4">
-          <div className="my-3">
-            <label htmlFor="title" className="form-label">
-              Enter Title:
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="title"
-              name="title"
-              placeholder="Enter your title (atleast 5 characters)"
-              value={note.title}
-              onChange={onChange}
-              minLength={5}
-              required
-              aria-describedby="emailHelp"
-            />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="description" className="form-label">
-              Enter Description:
-            </label>
-            <textarea
-              className="form-control"
-              id="description"
-              name="description"
-              placeholder="Enter your description (atleast 5 characters)"
-              value={note.description}
-              onChange={onChange}
-              minLength={5}
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="tag" className="form-label">
-              Enter Tag:
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="tag"
-              name="tag"
-              placeholder="Enter your tag"
-              value={note.tag}
-              onChange={onChange}
-            />
-          </div>
+      <h3 className="text-center fw-bold ">Add Note from here</h3>
+      <div className="container-xxxl  py-5 px-2 m-1 fs-5 row">
+        <div className=" col-8 md-col-8 sm-col-12 addnote">
+          <form className="w-100">
+            <div className="my-3">
+              <label htmlFor="title" className="mb-2">
+                Enter Title:
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="title"
+                name="title"
+                placeholder="Enter your title (atleast 5 characters)"
+                value={note.title}
+                onChange={onChange}
+                minLength={5}
+                required
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="description" className="mb-2">
+                Enter Description:
+              </label>
+              <textarea
+                className="form-control"
+                id="description"
+                name="description"
+                placeholder="Enter your description (atleast 5 characters)"
+                value={note.description}
+                onChange={onChange}
+                minLength={5}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="tag" className="mb-2">
+                Enter Tag:
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="tag"
+                name="tag"
+                placeholder="Enter your tag"
+                value={note.tag}
+                onChange={onChange}
+              />
+            </div>
 
-          <button
-            disabled={note.title.length < 5 || note.description.length < 5}
-            type="submit"
-            className="btn btn-primary"
-            onClick={handleClick}
-          >
-            Add Note
-          </button>
-        </form>
+            <button
+              disabled={note.title.length < 5 || note.description.length < 5}
+              type="submit"
+              className="btn btn-primary w-100"
+              onClick={handleClick}
+            >
+              Add Note
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

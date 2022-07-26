@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import ButtonDark from "./ButtonDark";
 
 const Login = (props) => {
@@ -36,6 +36,7 @@ const Login = (props) => {
   const onChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
+
   return (
     <div>
       <h3 className="text-center fw-bold mt-3">
@@ -43,7 +44,7 @@ const Login = (props) => {
       </h3>
       <div className="container-xxxl mt-3 login py-5 px-2 m-1 fs-5">
         <form onSubmit={handleSubmit} className="w-100 h-100">
-          <div className="my-3">
+          <div className="my-3 label">
             <label htmlFor="email" className="form-label">
               Email ID:
             </label>
@@ -73,7 +74,15 @@ const Login = (props) => {
               id="password"
             />
           </div>
-          <ButtonDark text="SUBMIT" type="submit" className=" my-3 py-2 " />
+          <ButtonDark text="LOGIN" type="submit" className=" my-3 py-2 " />
+          <br></br>
+          <Link
+            className="btn btn-primary fw-bold mybutton3 w-25 py-2 mx-5"
+            to="/signup"
+            type="submit"
+          >
+            New User? Click here
+          </Link>
         </form>
       </div>
     </div>

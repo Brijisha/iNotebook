@@ -8,7 +8,9 @@ ButtonDark.propTypes = {
 
 export default function ButtonDark(props) {
   return (
-    <button className={`btn btn-primary fw-bold mybutton3 ${props.className}`}>
+    <button
+      className={`btn btn-primary fw-bold mybutton3 w-25 m-5${props.className}`}
+    >
       {props.text}
     </button>
   );

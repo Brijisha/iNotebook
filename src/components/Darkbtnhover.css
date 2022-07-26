@@ -1,0 +1,15 @@
+.mybutton3 {
+    background-color: #1350c9;
+    color: white;
+}
+
+
+.mybutton3:hover {
+    background-color: #073a8c;
+    color: white;
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.3s cubic-bezier(0.100, 0.80, 0.64, 1);
+        -webkit-transition: all 0.3s cubic-bezier(0.500, 0.164, 0.144, 2.5);
+    transition-property: all;
+}
+

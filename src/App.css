@@ -9,12 +9,14 @@
 .login{
 background-size: cover;
 background-repeat: no-repeat;
-background-image: url(./images/iNotebook.jpg);
+background-image: url(./components/iNotebook.jpg);
 border: #1350c9 solid;
 border-radius: 20px;
-  
-
 }
+.form-label{
+width: 15%;
+}
+
 .mybutton3 {
   background-color: #1350c9;
   color: white;
@@ -39,7 +41,7 @@ border-radius: 20px;
   transition-property: all;
 }
 input {
-  background-image: linear-gradient(to bottom right, #E2E8EC, #FFFFFF);
+background-image: linear-gradient(to bottom right, #a6b3da, #c3b9e7);
 }
 
 input:hover {
@@ -51,3 +53,11 @@ textarea{
 textarea:hover {
       background-image: linear-gradient(to bottom right, #ebc0b2, #c3b9e7);
     }
+
+ .addnote {
+   background-size: cover;
+   background-repeat: no-repeat;
+   
+   border: #1947a5 solid;
+   border-radius: 20px;
+ }
