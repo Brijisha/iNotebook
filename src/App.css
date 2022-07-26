@@ -6,33 +6,39 @@
   height: 40vmin;
   pointer-events: none;
 }
+.login{
+background-size: cover;
+background-repeat: no-repeat;
+background-image: url(./images/iNotebook.jpg);
+border: #1350c9 solid;
+border-radius: 20px;
+  
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.mybutton3 {
+  background-color: #1350c9;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.mybutton3:hover {
+  background-color: #073a8c;
+  color: white;
+  transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.3s cubic-bezier(0.100, 0.80, 0.64, 1);
+  -webkit-transition: all 0.3s cubic-bezier(0.500, 0.164, 0.144, 2.5);
+  transition-property: all;
+}
+input {
+  background-image: linear-gradient(to bottom right, #E2E8EC, #FFFFFF);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:hover {
+  background-image: linear-gradient(to bottom right, #ebc0b2, #c3b9e7);
 }
+textarea{
+    background-image: linear-gradient(to bottom right, #E2E8EC, #FFFFFF);
+  }
+textarea:hover {
+      background-image: linear-gradient(to bottom right, #ebc0b2, #c3b9e7);
+    }

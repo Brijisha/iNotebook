@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ButtonDark from "./ButtonDark";
+
 const Login = (props) => {
   const host = "http://localhost:3001";
   const [credentials, setCredentials] = useState({ email: "", password: "" });
@@ -35,44 +37,45 @@ const Login = (props) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
   return (
-    <div className="container mt-3">
-      <h3>Login to continue to iNotebook</h3>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">
-            Email address
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            name="email"
-            value={credentials.email}
-            onChange={onChange}
-            aria-describedby="emailHelp"
-          />
-          <div id="emailHelp" className="form-text">
-            We'll never share your email with anyone else.
+    <div>
+      <h3 className="text-center fw-bold mt-3">
+        Login to continue to iNotebook
+      </h3>
+      <div className="container-xxxl mt-3 login p-5 m-5">
+        <form onSubmit={handleSubmit} className="w-100 h-100">
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">
+              Email address
+            </label>
+            <input
+              type="email"
+              className="m-1"
+              id="email"
+              name="email"
+              value={credentials.email}
+              onChange={onChange}
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" className="form-text">
+              We'll never share your email with anyone else.
+            </div>
           </div>
-        </div>
-        <div className="mb-3">
-          <label htmlFor="password" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            name="password"
-            value={credentials.password}
-            onChange={onChange}
-            className="form-control"
-            id="password"
-          />
-        </div>
-
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
+          <div className="mb-3">
+            <label htmlFor="password" className="form-label">
+              Password
+            </label>
+            <input
+              type="password"
+              name="password"
+              value={credentials.password}
+              onChange={onChange}
+              className="m-1"
+              id="password"
+            />
+          </div>
+          <ButtonDark text="SUBMIT" type="submit" className=" my-3 py-2 " />
+        </form>
+      </div>
     </div>
   );
 };
